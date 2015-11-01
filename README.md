@@ -7,20 +7,33 @@ A repository for reproducing [LoopBack community issues][wiki-issues].
 
 1. run a local mongodb server
 1. run it with node server/server.js
-2. go to explorer
-3. POST an empty feed (save the returning id)
-4. POST a comment:
+1. go to explorer
+1. POST an empty feed (save the returning id)
+1. POST a comment:
 ```json
 {
   "feed": {"id":<id>}
 }
 ```
-
-Go to local mongodb and check the comment that was saved. Is is saved as:
+1. POST a comment:
 ```json
 {
   "feedRef": <id>
 }
 ```
 
-Why the id is not converted to ObjectID?
+Go to local mongodb and check the comment that was saved. In the first case:
+```json
+{
+  "feedRef": <id>
+}
+```
+
+Go to local mongodb and check the comment that was saved. In the second case:
+```json
+{
+  "feedRef": ObjectId(<id>)
+}
+```
+
+Why the id is not converted to ObjectID in the first case but is converted in the second case?
