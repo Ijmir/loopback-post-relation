@@ -31,5 +31,13 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "feed": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "comment": {
+    "dataSource": "mongo",
+    "public": true
   }
 }

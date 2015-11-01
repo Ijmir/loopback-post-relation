@@ -1,0 +1,19 @@
+{
+    "name": "comment",
+    "base": "PersistedModel",
+    "idInjection": true,
+    "options": {
+        "validateUpsert": true
+    },
+    "properties": {},
+    "validations": [],
+    "relations": {
+        "feed": {
+            "type": "belongsTo",
+            "model": "feed",
+            "foreignKey": "feedRef"
+        }
+    },
+    "acls": [],
+    "methods": []
+}
